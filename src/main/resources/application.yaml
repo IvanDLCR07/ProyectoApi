@@ -1,3 +1,12 @@
 spring:
   application:
-    name: ProyectoApi
+    name: pokeApi
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/proyectosdb}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:root}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
