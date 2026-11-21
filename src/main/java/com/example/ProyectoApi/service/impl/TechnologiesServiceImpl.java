@@ -16,6 +16,7 @@ public class TechnologiesServiceImpl implements TechnologiesService {
 
     @Override
     public Technologies postTechnologies(Technologies technologies) {
+        technologies.setTechId(null); 
         return technologiesRepository.save(technologies);
     }
 
