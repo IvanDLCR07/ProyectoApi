@@ -28,7 +28,7 @@ public class TechnologiesController {
 
     @PostMapping
     public ResponseEntity<TechnologiesDto> postTechnologies(@RequestBody TechnologiesDto technologiesDto) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(technologiesConverter.entityToDto(technologiesService.postTechnologies(technologiesConverter.dtoToEntity(technologiesDto))));  
+        return ResponseEntity.status(HttpStatus.CREATED).body(technologiesConverter.entityToDto(technologiesService.createTechnologies(technologiesConverter.dtoToEntity(technologiesDto))));  
     }
 
     @DeleteMapping("/{techId}")
