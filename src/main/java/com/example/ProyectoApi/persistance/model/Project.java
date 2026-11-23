@@ -2,10 +2,6 @@ package com.example.ProyectoApi.persistance.model;
 
 import java.time.LocalDate;
 
-import org.hibernate.annotations.CollectionId;
-import org.hibernate.annotations.ManyToAny;
-
-import jakarta.annotation.Generated;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -27,8 +23,9 @@ public class Project {
 
     @Id 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column (name = "project_id")
     private Long projectId;
-    @Column(name = "projectName")
+    @Column(name = "project_name")
     private String projectName;
     @Column (name = "description")
     private String projectDescription;
@@ -42,9 +39,6 @@ public class Project {
     private String projectDemoUrl;
     @Column (name = "picture")
     private String projectPicture;
-    @Column (name = "status_id")
-    private Long statusId;
-
     @ManyToOne
     @JoinColumn (name = "status_id", referencedColumnName="status_id") 
     private Status status;

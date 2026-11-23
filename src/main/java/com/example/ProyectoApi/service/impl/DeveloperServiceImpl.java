@@ -1,4 +1,4 @@
-package com.example.ProyectoApi.service.impl;
+package com.example.ProyectoApi.service.Impl;
 
 import org.springframework.stereotype.Service;
 
