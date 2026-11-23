@@ -24,9 +24,9 @@ public class Status {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "statusId")
+    @Column(name = "status_id")
     private Long status_id;
-    @Column (name = "statusName")
+    @Column (name = "status_name")
     private String status_name;
     
     @OneToMany(mappedBy = "status", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
